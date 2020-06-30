@@ -6,6 +6,6 @@ jobs:
     steps:
     - name: auto-close-lock action step
       id: auto-close-lock
-      uses: dinkypumpkin/auto-close-lock@v1
+      uses: dinkypumpkin/auto-close-lock@v1.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
