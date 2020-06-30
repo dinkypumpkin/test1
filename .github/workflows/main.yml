@@ -1,14 +1,11 @@
-on: [push, issues, pull_request]
+on: [issues, pull_request]
 jobs:
-  hello_world_job:
+  auto-close-lock_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Automatically closes and locks issues and pull requests
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: dinkypumpkin/hello-world-javascript-action@v1
+    - name: auto-close-lock action step
+      id: auto-close-lock
+      uses: dinkypumpkin/auto-close-lock@v1
       with:
-        who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
