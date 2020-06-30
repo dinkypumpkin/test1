@@ -4,7 +4,7 @@ jobs:
   autocloselock:
     runs-on: ubuntu-latest
     steps:
-    - name: Auto close and lock issues and pull requiests
+    - name: Automatically close and lock issues and pull requests
       uses: dinkypumpkin/auto-close-lock@v1.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
