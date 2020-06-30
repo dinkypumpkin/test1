@@ -1,7 +1,7 @@
 name: autocloselock
 on: [issues, pull_request]
 jobs:
-  autoclose:
+  autocloselock:
     runs-on: ubuntu-latest
     steps:
     - name: Auto close and lock issues and pull requiests
