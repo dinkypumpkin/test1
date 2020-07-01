@@ -1,4 +1,10 @@
-on: [issues, pull_request]
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
 jobs:
   auto-close-lock_job:
     runs-on: ubuntu-latest
