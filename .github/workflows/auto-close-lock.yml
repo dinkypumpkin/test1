@@ -8,9 +8,9 @@ on:
 jobs:
   auto-close-lock_job:
     runs-on: ubuntu-latest
-    name: Automatically closes and locks issues and pull requests
+    name: auto-close-lock_job
     steps:
-      - name: auto-close-lock action step
+      - name: auto-close-lock_step
         id: auto-close-lock
         uses: dinkypumpkin/auto-close-lock@master
         with:
