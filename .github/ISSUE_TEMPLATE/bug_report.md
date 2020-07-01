@@ -6,7 +6,7 @@ labels: ''
 assignees: ''
 
 ---
-### *Remove the text below before submitting your bug report*
+### *Remove this line and all the text below before submitting your bug report*
 
 #### Read first
 
