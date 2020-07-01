@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     name: auto-close-lock-action_job
     steps:
+      - run: echo "${{ toJson(github.event_name) }}"
+      - run: echo "${{ toJson(github.event) }}"
       - name: auto-close-lock-action_close-issue-step
         id: auto-close-lock-action_close-issue
         uses: maxkomarychev/octions/octions/issues/update@master
