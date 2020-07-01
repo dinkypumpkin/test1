@@ -10,8 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     name: auto-close-lock-action_job
     steps:
-      - name: auto-close-lock-action_step
-        id: auto-close-lock-action
-        uses: dinkypumpkin/auto-close-lock-action@master
+      - name: auto-close-lock-action_close-issue-step
+        id: auto-close-lock-action_close-issue
+        uses: maxkomarychev/octions/octions/issues/update@master
+        issue_number: ${{ github.event.issue.number }}
+        state: closed        
+        if: ${{ github.event_name == "issue" }}
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: auto-close-lock-action_close-pr-step
+        id: auto-close-lock-action_close-pr
+        uses: maxkomarychev/octions/octions/pulls/update@master
+        if: ${{ github.event_name == "pull_request" }}
+        issue_number: ${{ github.event.issue.number }}
+        state: closed        
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: auto-close-lock-action_lock-step
+        id: auto-close-lock-action_lock
+        uses: maxkomarychev/octions/octions/issues/lock@master
+        issue_number: ${{ github.event.issue.number }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
