@@ -11,7 +11,7 @@ jobs:
         id: auto-close-lock-pr-action_close-step
         uses: maxkomarychev/octions/octions/pulls/update@master
         with:
-          token: ${{ secrets.MAINTAINER_CAN_MODIFY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           pull_number: ${{ github.event.number }}
           state: closed
       - name: auto-close-lock-pr-action_lock-step
