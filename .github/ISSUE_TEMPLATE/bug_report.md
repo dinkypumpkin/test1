@@ -6,18 +6,14 @@ labels: ''
 assignees: ''
 
 ---
-## *Remove the text below before submitting your report*
+## *Remove the text below before submitting your bug report*
 
 ### Read first
 
 - Do not request help with using get_iplayer. No user support is provided.
-- All reports will automatically be closed and locked upon receipt.
+- All bug reports will automatically be closed and locked upon receipt.
 - If your report identifies a reproducible bug in get_iplayer, it will be re-opened until a fix is released.
 - You will receive no communication from the developers, so provide all the information required.
-- Your report will be deleted if:
-    - you request or offer help for using get_iplayer outside the UK
-    - you request or offer help for using get_iplayer with a VPN or proxy
-    - you request or offer any programmes for download
 
 ### What you need to provide
 
@@ -29,6 +25,6 @@ assignees: ''
         get_iplayer [...options...] --verbose > log.txt 2>&1 
 
 - Screenshots, if the bug appears to be in the Web PVR Manager user interface.
-- OS [e.g. Windows 10, macOS 10.15, Ubuntu 20.04]
-- Browser [e.g. Chrome, Edge, Firefox, Safari]
-- get_iplayer version [e.g. 3.25.0] - use `get_iplayer -V`
+- OS and version [e.g. Windows 10 2004, macOS 10.15.5, Ubuntu 20.04.1]
+- Browser and version [e.g. Chrome 83.0.4103, Edge 83.0.478.56, Firefox 78.0.1, Safari 13.1.1]
+- get_iplayer version [e.g. 3.26, 3.26.0-MSWin32, 3.26.1-darwin] - use `get_iplayer -V`
