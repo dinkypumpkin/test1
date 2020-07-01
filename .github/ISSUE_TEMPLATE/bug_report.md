@@ -20,7 +20,7 @@ assignees: ''
 - A clear and concise description of the bug.
 - The **complete get_iplayer command line** used.
 - The PID or URL of the programme you attempted to download, if applicable. **Only provide one programme**.
-- A complete verbose log. Add logs as attachments. Do not paste logs into your report. Create a verbose log [e.g., log.txt] with:
+- A complete verbose log. Add logs as attachments. Do not paste logs into your bug report. Create a verbose log [e.g., log.txt] with:
 
         get_iplayer [...options...] --verbose > log.txt 2>&1 
 
