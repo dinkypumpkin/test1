@@ -25,7 +25,7 @@ jobs:
         uses: maxkomarychev/octions/octions/pulls/update@master
         if: ${{ github.event_name == 'pull_request' }}
         with:
-          token: ${{ secrets.PUBLIC_REPO }}
+          token: ${{ secrets.MAINTAINER_PUBLIC_REPO_ACCESS }}
           pull_number: ${{ github.event.number }}
           state: closed
       - name: auto-close-lock-action_lock-step
