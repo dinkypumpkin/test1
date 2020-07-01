@@ -7,42 +7,27 @@ assignees: ''
 
 ---
 
-**Read first**
-
-- This issue tracker has only one purpose: to be a conduit for users to report reproducible bugs to the get_iplayer developers.
+### Read first
 - Do not request help with using get_iplayer. No user support is provided.
-- All tickets are automatically closed and locked upon receipt.
+- All tickets will automatically be closed and locked upon receipt.
 - If your ticket identifies a reproducible bug in get_iplayer, it will be re-opened until a fix is released.
-- You will receive no communication from the developers. so be thorough in your bug report.
+- You will receive no communication from the developers, so provide all the information required.
 - Your ticket will be deleted if:
-    - it duplicates an existing ticket
     - you request or offer help for using get_iplayer outside the UK
     - you request or offer help for using get_iplayer with a VPN or proxy
     - you request or offer any programmes for download
 
-**Describe the bug**
-A clear and concise description of what the bug is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+### What you need to provide
+- A clear and concise description of the bug
+- The complete get_iplayer command line used
+- The PID or URL of the programme you attempted to download, if applicable. **Only provide one programme**.
+- Screenshots, if applicable.
+- A complete verbose log file showing the bug. Add verbose logs as attachments. Do not paste them in the body of your ticket. Create a verbose log with:
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+        get_iplayer [...options...] --verbose > log.txt 2>&1 
 
-**Logs**
-If applicable, add verbose logs to help explain your problem. Add verbose logs as attachments. Do not paste them in the body of your ticket. See the FAQ list for how to create a verbose log.
-
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
-
-**Desktop (please complete the following information):**
- - OS: [e.g. Windows 10]
- - Browser [e.g. Chrome, Edge]
- - Version [e.g. 3.25.0]
-
-**Additional context**
-Add any other context about the problem here.
+- The output from `get_iplayer --show-prefs` 
+- OS [e.g. Windows 10]
+- Browser [e.g. Chrome, Edge]
+- get_iplayer Version [e.g. 3.25.0]
