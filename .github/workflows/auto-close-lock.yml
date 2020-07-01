@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     name: auto-close-lock-action_job
     steps:
-      - run: echo "${{ toJson(github.event_name) }}"
-      - run: echo "${{ toJson(github.event) }}"
       - name: auto-close-lock-action_close-issue-step
         id: auto-close-lock-action_close-issue
         uses: maxkomarychev/octions/octions/issues/update@master
@@ -32,7 +30,7 @@ jobs:
         uses: maxkomarychev/octions/octions/pulls/update@master
         if: ${{ github.event_name == 'pull_request' }}
         with:
-          token: ${{ secrets.MAINTAINER_PUBLIC_REPO_ACCESS }}
+          token: ${{ secrets.MAINTAINER_CAN_MODIFY }}
           pull_number: ${{ github.event.number }}
           state: closed
       - name: auto-close-lock-action_lock-pr-step
