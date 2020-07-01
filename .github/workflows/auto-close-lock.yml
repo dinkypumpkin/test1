@@ -20,6 +20,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue_number: ${{ github.event.issue.number }}
           state: closed
+      - name: auto-close-lock-action_lock-issue-step
+        id: auto-close-lock-action_lock-issue
+        uses: maxkomarychev/octions/octions/issues/lock@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue_number: ${{ github.event.issue.number }}
       - name: auto-close-lock-action_close-pr-step
         id: auto-close-lock-action_close-pr
         uses: maxkomarychev/octions/octions/pulls/update@master
@@ -28,9 +34,9 @@ jobs:
           token: ${{ secrets.MAINTAINER_PUBLIC_REPO_ACCESS }}
           pull_number: ${{ github.event.number }}
           state: closed
-      - name: auto-close-lock-action_lock-step
-        id: auto-close-lock-action_lock
+      - name: auto-close-lock-action_lock-pr-step
+        id: auto-close-lock-action_lock-pr
         uses: maxkomarychev/octions/octions/issues/lock@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          issue_number: ${{ github.event.issue.number }}
+          issue_number: ${{ github.event.number }}
