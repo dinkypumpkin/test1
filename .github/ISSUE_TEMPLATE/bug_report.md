@@ -6,6 +6,7 @@ labels: ''
 assignees: ''
 
 ---
+*Remove the text below before submitting your ticket*
 
 ### Read first
 
@@ -21,13 +22,13 @@ assignees: ''
 ### What you need to provide
 
 - A clear and concise description of the bug.
-- The complete get_iplayer command line used.
+- The **complete get_iplayer command line** used.
 - The PID or URL of the programme you attempted to download, if applicable. **Only provide one programme**.
 - A complete verbose log. Add verbose logs as attachments. Do not paste logs into your ticket. Create a verbose log [e.g., log.txt] with:
 
         get_iplayer [...options...] --verbose > log.txt 2>&1 
 
 - Screenshots, if the bug appears to be in the Web PVR Manager user interface.
-- OS [e.g. Windows 10]
-- Browser [e.g. Chrome, Edge]
-- get_iplayer Version [e.g. 3.25.0]
+- OS [e.g. Windows 10, macOS 10.15, Ubuntu 20.04]
+- Browser [e.g. Chrome, Edge, Firefox, Safari]
+- get_iplayer version [e.g. 3.25.0] - use `get_iplayer -V`
