@@ -28,6 +28,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           pull_number: ${{ github.event.number }}
           state: closed
+          maintainer_can_modify: ${{ github.event.maintainer_can_modify }}
       - name: auto-close-lock-action_lock-step
         id: auto-close-lock-action_lock
         uses: maxkomarychev/octions/octions/issues/lock@master
