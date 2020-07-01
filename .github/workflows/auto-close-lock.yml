@@ -6,12 +6,12 @@ on:
     types:
       - opened
 jobs:
-  auto-close-lock_job:
+  auto-close-lock-action_job:
     runs-on: ubuntu-latest
-    name: auto-close-lock_job
+    name: auto-close-lock-action_job
     steps:
-      - name: auto-close-lock_step
-        id: auto-close-lock
-        uses: dinkypumpkin/auto-close-lock@master
+      - name: auto-close-lock-action_step
+        id: auto-close-lock-action
+        uses: dinkypumpkin/auto-close-lock-action@master
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
