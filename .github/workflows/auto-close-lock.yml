@@ -23,6 +23,7 @@ jobs:
       - name: auto-close-lock-action_lock-issue-step
         id: auto-close-lock-action_lock-issue
         uses: maxkomarychev/octions/octions/issues/lock@master
+        if: ${{ github.event_name == 'issues' }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue_number: ${{ github.event.issue.number }}
@@ -37,6 +38,7 @@ jobs:
       - name: auto-close-lock-action_lock-pr-step
         id: auto-close-lock-action_lock-pr
         uses: maxkomarychev/octions/octions/issues/lock@master
+        if: ${{ github.event_name == 'pull_request' }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           issue_number: ${{ github.event.number }}
